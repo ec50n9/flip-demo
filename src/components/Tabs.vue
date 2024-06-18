@@ -26,7 +26,7 @@ watch(selectedIndex, async () => {
         {
           transform: `translateX(${
             lastBtnBgRect.value.left - newBtnBgRect.left
-          }px) translateY(${lastBtnBgRect.value.top - newBtnBgRect.top}px)`,
+          }px)`,
           width: `${lastBtnBgRect.value.width}px`,
           height: `${lastBtnBgRect.value.height}px`,
         },
