@@ -1,6 +1,7 @@
 <script setup lang="ts">
 import FlipList from "./components/FlipList.vue";
 import Tabs from "./components/Tabs.vue";
+import NiceCard from "./components/NiceCard.vue";
 </script>
 
 <template>
@@ -9,6 +10,7 @@ import Tabs from "./components/Tabs.vue";
     <div class="py-4 bg-beige-base">
       <Tabs />
     </div>
+    <NiceCard />
   </div>
 </template>
 
