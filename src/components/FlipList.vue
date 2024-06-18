@@ -58,7 +58,7 @@ watch(dataList, async () => {
         },
         { transform: `translateX(${0}) translateY(${0})` },
       ],
-      { duration: 8000, easing: "ease-in-out" }
+      { duration: 1000, easing: "ease-in-out" }
     );
   });
 
@@ -67,13 +67,18 @@ watch(dataList, async () => {
 </script>
 
 <template>
-  <div>
-    <div>
+  <div class="py-4 flex flex-col items-center gap-4">
+    <div class="flex gap-4">
       <button @click="handleShuffleBtnClick()">Shuffle</button>
       <button @click="handleReverseBtnClick()">Reverse</button>
     </div>
     <ul class="flip-list">
-      <li v-for="item in dataList" :key="item" ref="dataElementRefs">
+      <li
+        v-for="item in dataList"
+        :key="item"
+        ref="dataElementRefs"
+        class="w-12 h-12 flex justify-center items-center bg-white b-1 b-solid b-gray-3 rd-4"
+      >
         {{ item }}
       </li>
     </ul>
@@ -87,14 +92,5 @@ watch(dataList, async () => {
   display: grid;
   grid-template-columns: repeat(20, 1fr);
   gap: 8px;
-}
-
-.flip-list li {
-  width: 50px;
-  height: 50px;
-  line-height: 50px;
-  background-color: white;
-  border: 1px solid #ccc;
-  border-radius: 12px;
 }
 </style>
