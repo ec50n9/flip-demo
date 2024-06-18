@@ -1,22 +1,20 @@
 <script setup lang="ts">
 import FlipList from "./components/FlipList.vue";
+import Tabs from "./components/Tabs.vue";
 </script>
 
 <template>
-  <FlipList />
+  <div>
+    <FlipList />
+    <div class="py-4 bg-beige-base">
+      <Tabs />
+    </div>
+  </div>
 </template>
 
 <style scoped>
-.logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-  transition: filter 300ms;
-}
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
-}
-.logo.vue:hover {
-  filter: drop-shadow(0 0 2em #42b883aa);
+.bg-beige-base {
+  --tw-bg-opacity: 0.7;
+  background-color: rgb(237 220 203 / var(--tw-bg-opacity));
 }
 </style>
